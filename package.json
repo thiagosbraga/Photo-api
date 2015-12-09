@@ -1,0 +1,25 @@
+{
+  "name": "photo-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thiagosbraga/Photo-api.git"
+  },
+  "author": "Thiago Braga",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thiagosbraga/Photo-api/issues"
+  },
+  "homepage": "https://github.com/thiagosbraga/Photo-api#readme",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "mongoose": "^4.2.10",
+    "multer": "^1.1.0"
+  }
+}
