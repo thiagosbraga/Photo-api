@@ -5,7 +5,7 @@ module.exports={
 	list:list,
 	create:create,
 	delete:del,
-	get:get
+	
 };
 
 let faker = {message:'request OK'};
@@ -16,11 +16,9 @@ function list(req,res){
 }
 
 function create(req,res){
-	res.json(faker);
+	console.log(req.body);
+	console.log(req.file);
 
-}
-
-function get(req,res){
 	res.json(faker);
 
 }

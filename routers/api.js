@@ -4,20 +4,32 @@ let router = new Router();
 let controllers = require('../controller');
 
 let bodyparser = require('body-parser');
-let multer = require('multer')();
+let multer = require('multer')({dest:'./public/images'});
 
 router.use(bodyparser.urlencoded({extended:false}));
 router.use(bodyparser.json());
-router.use(multer.array());	
+router.use(multer.single('picture')); 
+
+
 
 router
-.route('/photos')
-.get(controllers.photos.list)
-.post(controllers.photos.create)
+  .route('/categories')
+  .get(controllers.categories.list)
+  .post(controllers.categories.create)
 
 router
-.route('/photos/:id')
-.get(controllers.photos.get)
+  .route('/categories/:id')
+  .get(controllers.categories.get)
+
+
+router
+  .route('/images')
+  .get(controllers.images.list)
+  .post(controllers.images.create)
+
+router
+  .route('/images/:id')
+  .get(controllers.images.delete)
 
 
 module.exports=router;

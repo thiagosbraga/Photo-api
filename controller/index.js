@@ -1,6 +1,8 @@
 'use strict';
 
-module.exports={
+module.exports= {
 
-	photos : require('./photos')
+	images : require('./images'),
+	auth:require('./auth'),
+	categories : require('./categories')
 };
